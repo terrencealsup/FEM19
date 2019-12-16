@@ -339,6 +339,19 @@ for all $v\in V$.  This is now a linear equation for $\hat{u}$ and the right han
   damping, i.e., $\mu<1$. Terminate the Newton iteration when the
   update $\hat u$ is small. Report your experience and plot the
   solution(s) you find.
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{\bf Solution}\\
+The figure below shows the two computed solutions to Bratu's problem.  To compute the solution I used 50 linear finite elements with a uniform mesh over the interval $(0,1)$.  Additionally I used 10 full Newton steps with $\mu = 1$.  I did not run into any convergence issues due to lack of damping.  My implementation in Python could have been much more efficient since I did not take advantage of the fact that the stiffness matrix $A$ is sparse.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width = 4in]{bratu_sol.png}
+\caption{The two computed solutions to Bratu's problem when $\lambda = 2$.}
+\label{fig:bratu_sol}
+\end{figure}
+ 
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{enumerate}
 
 
